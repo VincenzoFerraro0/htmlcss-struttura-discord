@@ -10,12 +10,10 @@
     --navbar_TRASP: #ffffff5e;
     --logo:green;
     --menu:red;
-    --menu-items:#accd2b94;
     --bottone: purple;
     --hero: #ffffff5e;
     --box-img: yellow;
     --box-text: brown;
-    --section-withe: white;
     --section-gray: gray;
     --footer-background: #23272A;
     --footer-item: #ccff00;
@@ -23,183 +21,136 @@
 
 }
 
-
-/* parte principale header e hero */
+/* start header */
 header {
     background-color: var(--header-background-img);
-    width: 100%;
-    height: 500px;
+    padding: 15px;
+    height: 300px;
 }
 
 .flex {
     display: flex;
 }
 
+header > .flex {
+    justify-content: space-around;
+}
+
+.logo,
+.menu,
+.btn-accedi {
+    height: 50px;
+    width: 50px;
+}
+
 
 nav {
     background-color: var(--navbar_TRASP);
-    width: 100%;
     height: 20%;
-    justify-content: space-around;
-    padding:20px;
-
-
+    
 }
+
 nav figure {
     background-color: var(--logo);
-    flex-basis: 300px;
-    height: 50px;
+
 
 }
-nav div {
+nav .menu {
     background-color: var(--menu);
-    flex-basis: 600px;
-    height: 50px;
-}
-#menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
 
-}
-#menu span {
-    background-color: var(--menu-items);
-    flex-basis: 50px;
-    height: 20px;
 }
 
 nav button {
     background-color: var(--bottone);
-    flex-basis: 300px;
-    height: 50px;
+
 }
 
-
-#box-hero div { 
-    background-color: var(--hero);
-    margin: 0 auto;
-    margin-top: 20px;
-    height: 300px;
+/* contenitore testo header */
+.box-hero{
+    text-align: center;
     width: 60%;
-    
-}
+    margin: 0 auto;
+    height: 100px;
+    margin-top: 20px;
+    background-color: var(--hero);
+} 
 /* inizio main */
+
+/* contenitore default per le section */
 .container-80 {
     width: 80%;
     margin: 0 auto;
 }
+
+/* sfondo grigio per alcune section  */
 .bg-gray {
     background-color: var(--section-gray);
 }
 
-/* classe flex e sfondo bianco */
-.section-white
-{
-    background-color: var(--section-withe);
-    height: 500px;
-    /* justify-content: center;
-    align-items: center; */
-    gap: 20px;
+
+.flex-basis-60 {
+    flex-basis: 60%;
+    height: 60px;
+    background-color: var(--box-img);
 }
 
-.section-white figure {
-    background-color: var(--box-img);
-    flex-basis: 60%;
-    height: 400px ;
-}
-.section-white div {
-    background-color: var(--box-text);
+.flex-basis-40 {
     flex-basis: 40%;
-    height: 400px ;
-}
-/* classe flex senza sfonfo cosi prende il colore dato al body */
-.section-gray {
-    height: 500px;
-    /* justify-content: center;
-    align-items: center; */
-    gap: 20px; 
-     
-}
-.section-gray div {
+    height: 60px;
     background-color: var(--box-text);
-    flex-basis: 40%;
-    height: 400px ;
+
 }
-.section-gray figure {
-    background-color: var(--box-img);
-    flex-basis: 60%;
-    height: 400px ;
-}
-/* classe flex senza sfondo in colonna */
-.section-gray-column {
-    display: flex;
+
+/* selettore che prende l'ultima section  */
+main section:last-child > div {
     flex-direction: column;
-    height: 700px;
-    justify-content: space-around;
-    align-items: center;
 }
-.section-gray-column div {
-    background-color: var(--box-text);
-    flex-basis: 100px;
-    width: 500px;
-    
-}
-.section-gray-column figure {
-    background-color: var(--box-img);
-    flex-basis:  400px;
-    width: 1000px ;
-}
+
+
+
 /* start footer */
 footer {
     background-color: var(--footer-background);
-    width: 100%;
-    padding: 70px;
-
-
+    height: 300px;
 }
 
-/* contenitore top */
-#container-footer-top{
-    display: flex;
+/* contenitore footer alto */
+.container-footer-top{
     justify-content: space-between;
     margin: 0 auto;
-    width: 80%;
-    height: 300px;
-    
+
 }
 
-#container-footer-top section {
+.container-footer-top section {
     background-color: var(--footer-item);
     flex-basis: 300px;
     height: 20px;
 }
 
-#container-footer-top div{
+.container-footer-top div{
     background-color: var(--footer-item);
     flex-basis: 50px;
-    height: 20px;
+    height: 100px;
+    margin-bottom: 20px;
 
 }
-/* contenitore bottom */
-#container-footer-bottom {
-    display: flex;
-    width: 80%;
-    height: 50px;
-    margin: 0 auto;
+
+
+
+/* contenitore footer basso */
+.container-footer-bottom {
     justify-content: space-between;
     align-items: flex-end;
     border-top: 1px solid var(--footer-item);
-    
-
 }
 
-#container-footer-bottom figure  {
+.container-footer-bottom figure  {
     background-color: var(--footer-item);
     flex-basis: 50px;
     height: 20px;
 }
-#container-footer-bottom button {
 
+.container-footer-bottom button {
     background-color: var(--footer-item);
     flex-basis: 100px;
     height: 20px;
